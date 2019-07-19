@@ -7,7 +7,8 @@ Hey! to run this API, **Postman** is recommendet, because there is no Frontend y
 To install the Tast-Manager API, simply clone the Repo and run `npm i`.
 Start the Server with `npm run dev` (when nodemon is installed).
 
-For the database, clone and run the Docker Container ... (to be done)...
+For a production Version, create a `.env` File in the source directory.
+Required: PRODUCTION=(true|false), DB_HOST, DB_USER, DB_PASS
 
 ## Use the App
 ### Create a User
