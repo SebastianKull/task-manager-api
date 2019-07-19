@@ -11,8 +11,12 @@ if(process.env.PRODUCTION === "true") {
     connection = `mongodb+srv://${user}:${pass}@${host}`
 }
 
-mongoose.connect(`${connection}/${dbname}`, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false
-})
+try {
+    mongoose.connect(`${connection}/${dbname}`, {
+        useNewUrlParser: true,
+        useCreateIndex: true,
+        useFindAndModify: false
+    })
+} catch (e) {
+    console.log(e)
+}
